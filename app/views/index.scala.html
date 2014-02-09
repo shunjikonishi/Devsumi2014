@@ -1,0 +1,30 @@
+@(message: String)
+
+@main("Time Attack") {
+<div>
+	<h1>Herokuでターイムアタック！<span style="float:right;font-size:smaller;">Session:【14-E-5】 #devsumiE</span></h1>
+</div>
+<div style="font-size:xx-large;">
+	デモ：WebSocketでHerokuに負荷をかけよう！<br>
+	<a href="http://ws-vote.herokuapp.com/" target="_blank" style="font-size:48px;">http://ws-vote.herokuapp.com/</a>
+</div>
+<div class="row">
+	<div class="col-sm-7">
+		<iframe src="http://ws-vote.herokuapp.com/rooms/default" style="width:100%;height:720px;"></iframe>
+	</div>
+	<div class="col-sm-5">
+		<div class="alert alert-danger">
+			<strong>注意！</strong>Androidの標準ブラウザはWebSocketに対応していないためChrome等でアクセスしてください。
+		</div>
+		<div>
+			<ul>
+				<li>単純にボタンの押された回数をカウントアップするだけのアプリです。</li>
+				<li>Heroku死ね！ぐらいの勢いで連打してください。</li>
+				<li>キリ番押された方にはFLECTのノベリティ(？)を差し上げます。</li>
+				<li>ボタンの色に深い意味はありません。</li>
+			</ul>
+		</div>
+		<div class="pull-right" style="margin-top:100px;"><img src="/assets/images/devsumi.jpg"/></div>
+	</div>
+</div>
+}

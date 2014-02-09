@@ -1,0 +1,31 @@
+@(message: String)
+
+@main("Heroku setup") {
+<div>
+	<h1>デモアプリ　セットアップ<span style="float:right;font-size:smaller;">Session:【14-E-5】 #devsumiE</span></h1>
+</div>
+<div class="row">
+	<div class="col-sm-12">
+		<div>
+			<p>ソースコード一式をgitでpushするだけ</p>
+		</div>
+		<div>
+<pre style="width:100%;color:white;background-color:black;font-size:24px;">
+$git clone https://github.com/shunjikonishi/ws-vote.git
+$cd ws-vote
+$heroku create
+$heroku labs:enable websockets
+$heroku addons:add rediscloud
+$heroku config:set REDIS_URI=`heroku config:get REDISCLOUD_URL`
+$git push heroku master
+$heroku open
+</pre>
+		</div>
+		<div>
+			<p>WebSocketとRedisを使用しているため、若干通常のアプリよりも手順が多い</p>
+			<p>デモでは有償のRedisGreen使用しているがここでは無償のRedisCloudを使用</p>
+			<p>PapertrailとNewRelicの追加は省略</p>
+		</div>
+	</div>
+</div>
+}
