@@ -1,7 +1,7 @@
 @(message: String)
 
 @main("Heroku setup") {
-<div>
+<div class="page-header">
 	<h1>デモアプリ　セットアップ<span style="float:right;font-size:smaller;">Session:【14-E-5】 #devsumiE</span></h1>
 </div>
 <div class="row">
@@ -22,9 +22,12 @@ $heroku open
 </pre>
 		</div>
 		<div>
-			<p>WebSocketとRedisを使用しているため、若干通常のアプリよりも手順が多い</p>
-			<p>デモでは有償のRedisGreen使用しているがここでは無償のRedisCloudを使用</p>
-			<p>PapertrailとNewRelicの追加は省略</p>
+			<ul>
+				<li>WebSocketとRedisを使用しているため、若干通常のアプリよりも手順が多い</li>
+				<li>デモでは有償のRedisGreen使用しているがここでは無償のRedisCloudを使用</li>
+				<li>PapertrailとNewRelicの追加は省略</li>
+				<li style="color:red;">1分でWebアプリをインターネット上に公開できる</li>
+			</ul>
 		</div>
 	</div>
 </div>
