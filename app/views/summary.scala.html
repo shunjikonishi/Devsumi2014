@@ -8,15 +8,16 @@
 	<div class="col-sm-12">
 		<div>
 			<ul>
+				<li>git, Playframework, Railsなどの標準技術で使えHerokuのために覚えなければならないことがほとんどない</li>
 				<li>試してみるだけなら無償なので、とりあえず試してみる価値はある</li>
 				<li>豊富なアドオンによって作らなければならないもの、用意しなければならないものが激減する</li>
 				<li>スケールアウト、スケールアップともにコマンド一発(またはWebUI)で可能</li>
 				<li>FLECTではHerokuで開発したい開発者を<a href="http://www.flect.co.jp/recruit/index.html" target="_blank">大募集中</a></li>
 			</ul>
-		<div style="margin-top:40px;">
-			<p>ところでHerokuの弱点は。。。。</p>
+		<div style="margin-top:100px;">
+			<p>ところでHerokuの<span style="color:red;" id="weakpoint">弱点</span>は。。。。</p>
 		</div>
-		<div>
+		<div style="display:none;" id="weakpoint2">
 			<ul>
 				<li style="color:red;font-weight:bold;">サーバーが日本に無い</li>
 				<li>東海岸との往復なのでレイテンシはそれなり。。。これが理由でEC2になることも。</li>
@@ -25,4 +26,16 @@
 		</div>
 	</div>
 </div>
+<script>
+$(function() {
+	$("#weakpoint").click(function() {
+		var $target = $("#weakpoint2");
+		$target.slideDown("slow");
+		setTimeout(function() {
+	        var targetOffset = target.offset().top;
+    	    $('html,body').animate({scrollTop: targetOffset},400,"easeInOutQuart");
+    	}, 1000);
+	});
+})
+</script>
 }
